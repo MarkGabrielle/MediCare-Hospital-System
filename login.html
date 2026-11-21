@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediCare - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <img src="medicarelogo.jpeg" alt="MediCare Logo">
+
+        <div class="logo-text">
+            <h1>MediCare</h1>
+            <p>Hospital Staff Scheduling System</p>
+        </div>
+
+    </div>
+
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Staff</a>
+    <a href="#">Schedule</a>
+    <a href="#">Replacement</a>
+    <a href="#">Approval</a>
+    <a href="#">Open and Swap</a>
+
+    <a href="login.html" class="login-btn" id="loginLink">Login</a>
+
+</nav>
+
+
+
+</header>
+
+<section class="login-section">
+
+    <div class="login-card">
+
+        <div class="login-logo">
+            <img src="medicarelogo.jpeg" alt="MediCare Logo">
+        </div>
+
+        <h2>Welcome Back</h2>
+
+        <p class="login-subtitle">
+            Sign in to access the MediCare system
+        </p>
+
+        
+<div class="login-card">
+    <h2 id="formTitle">Login</h2>
+
+   
+    <form id="loginForm" onsubmit="loginUser(event)">
+        <label>Username</label>
+        <input type="text" id="username" required>
+
+        <label>Password</label>
+        <input type="password" id="password" required>
+
+        <label>Account Type</label>
+        <select id="account" required>
+            <option value="">Select Account Type</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Nurse">Nurse</option>
+            <option value="HR">HR</option>
+        </select>
+
+        <button type="submit">Login</button>
+        <p id="message"></p>
+
+        <p>
+            Don't have an account?
+            <a href="#" onclick="showCreateAccount(); return false;">
+                Create Account
+            </a>
+        </p>
+    </form>
+
+    <form id="signupForm" style="display: none;">
+        <label>Staff Member</label>
+        <select id="signupStaff" required>
+            <option value="">Select your name</option>
+        </select>
+
+        <label>Username</label>
+        <input type="text" id="signupUsername" required>
+
+        <label>Password</label>
+        <input type="password" id="signupPassword" minlength="6" required>
+
+        <label>Confirm Password</label>
+        <input type="password" id="signupConfirmPassword" required>
+
+        <button type="submit">Create Account</button>
+
+        <p id="signupMessage"></p>
+
+        <p>
+            Already have an account?
+            <a href="#" onclick="showLogin(); return false;">
+                Back to Login
+            </a>
+        </p>
+    </form>
+</div>
+
+<script src="script.js"></script>
+<script src="accounts.js"></script>
+
+        <div class="login-footer">
+            <p>Secure Hospital Staff Management System</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>MediCare</h3>
+
+    <p>
+        Hospital Staff Scheduling and Shift Management System
+    </p>
+
+    <p>
+        © 2026 MediCare
+    </p>
+
+</footer>
+</body>
+</html>
